@@ -16,24 +16,14 @@ public class Q3_Longest_substring {
 		int length = 0;
 		int ans = 0;
 
-		outer: for (int i = 0; i < org.length; i++) {
+		for (int i = 0; i < org.length; i++) {
+			if(set.contains(org[i])){
 
-			length = 0;
-			set = new TreeSet<>();
-
-			for (int j = i; j < org.length; j++) {
-
-				if (set.contains(org[j])) {
-
-					ans = Math.max(ans, length);
-					continue outer;
-				} else {
-					length++;
-					set.add(org[j]);
-				}
 			}
-			ans = Math.max(ans, length);
+			set.add(org[i]);
+			ans = Math.max(ans, set.size());
 		}
+
 
 		return ans;
 	}

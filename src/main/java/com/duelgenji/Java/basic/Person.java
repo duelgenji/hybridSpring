@@ -6,8 +6,11 @@ import lombok.Data;
 public class Person {
     private String name;
 
-    private Integer age;
+    private Integer age = 1;
 
     private Job job;
 
+    public Person() {
+        System.out.println(111);
+    }
 }

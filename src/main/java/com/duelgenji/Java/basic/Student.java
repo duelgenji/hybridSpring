@@ -1,4 +1,13 @@
 package com.duelgenji.Java.basic;
 
-public class Student {
+import lombok.Data;
+
+@Data
+public class Student extends Person{
+
+    private Integer age = 2;
+
+    private String studentNumber;
+
+
 }
